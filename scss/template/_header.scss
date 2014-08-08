@@ -3,27 +3,19 @@
 #header {
 	@extend .padding-horiz;
 	padding-top: 0.5rem;
-	padding-bottom: 0.5rem;
-	position: fixed;
-	z-index: 10;
-	width: 100%;
-	height: $header-height;
+	padding-bottom: 1rem;
 	background-color: $header-bg;
-
-	// scroll based changes
-	&.scrolled {
-
-	}
+	overflow: hidden;
 
 	.logo-surround {
 		position: relative;
+		float: left;
 	}
 
 	#logo {
-		float: left;
-		background: url(../images/logo.png) 50% 50% no-repeat;
+		background: url(../images/logo.png) 0 0 no-repeat;
 		display: block;
-		width: 254px;
+		width: 255px;
 		height: 50px;
 		z-index: 2;
 		position: relative;
@@ -45,7 +37,7 @@
 		@include breakpoint(desktop-range) {
 			width: 30px;
 			height: 30px;
-			top: 17px;
+			top: 13px;
 			left: 190px;
 		}
 	}
@@ -56,21 +48,17 @@
 		background: $navbar-bg;
 		float: right;
 		border-radius: $border-radius;
-		@extend %vertical-align;
-		@include breakpoint(tablet-range) {
+		margin-top: 0.5rem;
+		@include breakpoint(desktop-only) {
 			background: none;
 			float: none;
-		}
-		@include breakpoint(mobile-only) {
-			background: none;
-			float: none;
+			margin: 0;
 		}
 		ul {
-			display: inline-block;
+			display: block;
 			margin: 0;
 			padding: 0;
 			list-style: none;
-			float: right;
 			text-transform: uppercase;
 			li {
 				float: left;
@@ -121,7 +109,6 @@
 		}
 
 		.panel-activation {
-			@extend %vertical-align;
 			display: none;
 			font-size: 2rem;
 			cursor: pointer;
@@ -132,35 +119,4 @@
 		}
 
 	}
-
-}
-
-// Header Image
-.header-image {
-    &.fullwidth {
-        #body {
-            padding-left: 0;
-            padding-right: 0;
-
-            >.listing-row {
-                padding-left: $padding-horiz;
-                padding-right: $padding-horiz;
-            }
-        }
-    }
-    .listing-row:last-child {
-    	margin-bottom: 2rem;
-    }
-
-    #body {
-        >.blog-header {
-            margin-top: - $header-height - $padding-vert - 1.5rem;
-            padding-top: $header-height + 4rem;
-        }
-    }
-
-    #breadcrumbs {
-    	margin-top: 1rem;
-    }
-
 }

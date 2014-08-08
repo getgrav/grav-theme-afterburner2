@@ -31,7 +31,6 @@
         <link rel="stylesheet" href="{{ base_url_relative }}/{{ stylesheet }}" type="text/css" />
     {% endfor %}
     <script src="{{ theme_url }}/js/jquery-2.1.1.min.js"></script>
-    <script src="{{ theme_url }}/js/nova-theme.js"></script>
     <script src="{{ theme_url }}/js/modernizr.custom.71422.js"></script>
     {% block javascripts %}
         {% if page.header.lightbox %}
@@ -56,7 +55,6 @@
     <div id="container">
         {% block header %}
         <header id="header">
-
                 <div class="logo-surround">
                     <a href="{{ base_url_absolute}}" id="logo"></a>
                     <span class="logo-accent"></span>
@@ -65,10 +63,8 @@
                     {% include 'partials/navigation.html.twig' %}
                     <span class="panel-activation menu-btn">&#9776;</span>
                 </div>
-
         </header>
         {% endblock %}
-
         {% block body %}
         <section id="body" class="{{ class }}">
             {% block sidebar %}{% endblock %}
@@ -79,9 +75,6 @@
 
         {% block footer %}
         <footer id="footer">
-            <div class="totop">
-                <span><a href="#" id="toTop"><i class="fa fa-arrow-up"></i></a></span>
-            </div>
             <p><a href="http://getgrav.org">Grav</a> was <i class="fa fa-code"></i> with <i class="fa fa-heart"></i> by <a href="http://www.rockettheme.com">RocketTheme</a>.</p>
         </footer>
         {% endblock %}

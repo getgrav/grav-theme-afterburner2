@@ -1,22 +1,13 @@
 // Modular Showcase styling
 .modular {
 
-    // special case for header
-    &.header-image {
-        #body {
-            >.showcase {
-                margin-top: - $header-height - $padding-vert - 1.5rem;
-                padding-top: $header-height + 4rem;
-            }
-        }
-    }
-
     .showcase {
-        padding-top: 4rem;
-        padding-bottom: 4rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
         background-color: $showcase-bg;
         text-align: center;
         color: $showcase-text;
+        margin-top: -3rem;
         h1 {
             font-size: 3.5rem;
             margin-top: 0;

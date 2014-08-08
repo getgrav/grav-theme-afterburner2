@@ -1,5 +1,5 @@
 @import url(//fonts.googleapis.com/css?family=Montserrat:400|Raleway:300,400,600|Inconsolata);
-#header #navbar, #header #navbar .panel-activation, #footer p {
+#footer p {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -42,13 +42,13 @@ b, strong, label, th {
   padding-right: 0; }
 
 #body {
-  padding-top: 8rem;
-  padding-bottom: 11rem; }
+  padding-top: 3rem;
+  padding-bottom: 9rem; }
 
 .default-animation, #body, .button {
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  transition: all 0.5s ease; }
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
 
 .padding-horiz, .fullwidth #header, .fullwidth #breadcrumbs, .fullwidth .blog-header, .fullwidth .blog-content-item, .fullwidth .blog-content-list, .fullwidth ul.pagination, .fullwidth #body > .modular-row, #body, #header, #footer {
   padding-left: 7rem;
@@ -68,19 +68,16 @@ b, strong, label, th {
 
 #header {
   padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  position: fixed;
-  z-index: 10;
-  width: 100%;
-  height: 5rem;
-  background-color: #252d35; }
+  padding-bottom: 1rem;
+  background-color: #252d35;
+  overflow: hidden; }
   #header .logo-surround {
-    position: relative; }
+    position: relative;
+    float: left; }
   #header #logo {
-    float: left;
-    background: url(../images/logo.png) 50% 50% no-repeat;
+    background: url(../images/logo.png) 0 0 no-repeat;
     display: block;
-    width: 254px;
+    width: 255px;
     height: 50px;
     z-index: 2;
     position: relative; }
@@ -101,28 +98,25 @@ b, strong, label, th {
       #header .logo-accent {
         width: 30px;
         height: 30px;
-        top: 17px;
+        top: 13px;
         left: 190px; } }
   #header #navbar {
     font-size: 0.7rem;
     font-family: "Arial", "Helvetica", "Geneva", sans-serif;
     background: #f3f3f3;
     float: right;
-    border-radius: 3px; }
-    @media only all and (min-width: 48rem) and (max-width: 59.938rem) {
+    border-radius: 3px;
+    margin-top: 0.5rem; }
+    @media only all and (max-width: 59.938rem) {
       #header #navbar {
         background: none;
-        float: none; } }
-    @media only all and (max-width: 47.938rem) {
-      #header #navbar {
-        background: none;
-        float: none; } }
+        float: none;
+        margin: 0; } }
     #header #navbar ul {
-      display: inline-block;
+      display: block;
       margin: 0;
       padding: 0;
       list-style: none;
-      float: right;
       text-transform: uppercase; }
       #header #navbar ul li {
         float: left;
@@ -160,20 +154,6 @@ b, strong, label, th {
         #header #navbar .panel-activation {
           display: inline-block; } }
 
-.header-image.fullwidth #body {
-  padding-left: 0;
-  padding-right: 0; }
-  .header-image.fullwidth #body > .listing-row {
-    padding-left: 7rem;
-    padding-right: 7rem; }
-.header-image .listing-row:last-child {
-  margin-bottom: 2rem; }
-.header-image #body > .blog-header {
-  margin-top: -9.5rem;
-  padding-top: 9rem; }
-.header-image #breadcrumbs {
-  margin-top: 1rem; }
-
 #footer {
   position: absolute;
   background: #313741;
@@ -186,21 +166,6 @@ b, strong, label, th {
   text-align: center; }
   #footer a:hover {
     color: #fff; }
-  #footer .totop {
-    position: absolute;
-    bottom: 5rem;
-    text-align: center;
-    left: 0;
-    right: 0; }
-    #footer .totop span {
-      font-size: 1.7rem;
-      line-height: 2.5rem;
-      background: #313741;
-      width: 3rem;
-      height: 2rem;
-      border-radius: 3px;
-      display: inline-block;
-      text-align: top; }
   #footer p {
     margin: 0; }
     #footer p .fa {
@@ -490,7 +455,7 @@ td {
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
 
-.container-push, .push-push {
+.container-push {
   -webkit-transform: translate3d(250px, 0, 0);
   -moz-transform: translate3d(250px, 0, 0);
   -ms-transform: translate3d(250px, 0, 0);
@@ -498,7 +463,7 @@ td {
   transform: translate3d(250px, 0, 0); }
 
 /* Menu Transitions */
-.pushy, #container, .push {
+.pushy, #container {
   -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
   -moz-transition: -moz-transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
   transition: transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
@@ -522,7 +487,8 @@ td {
   padding-top: 2rem;
   padding-bottom: 2rem;
   background-color: #252d35;
-  color: #f2f2f2; }
+  color: #f2f2f2;
+  margin-top: -3rem; }
   .blog-header h1 {
     font-size: 3.5rem;
     margin-top: 0; }
@@ -560,18 +526,19 @@ td {
       border-radius: 3px; }
   .list-item .list-blog-date {
     display: inline-block; }
-  .list-item .list-blog-details {
-    background: #eeeeee;
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem; }
-    .list-item .list-blog-details .tags {
-      float: right; }
-      .list-item .list-blog-details .tags a {
-        background: none !important;
-        padding: 0;
-        margin-left: 5px;
-        text-transform: capitalize;
-        font-size: 0.9rem; }
+
+.list-blog-details {
+  background: #eeeeee;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem; }
+  .list-blog-details .tags {
+    float: right; }
+    .list-blog-details .tags a {
+      background: none !important;
+      padding: 0;
+      margin-left: 5px;
+      text-transform: capitalize;
+      font-size: 0.9rem; }
 
 .blog-content-item .list-blog-padding > p:nth-child(2) {
   font-size: 1.2rem; }
@@ -632,15 +599,13 @@ ul.pagination {
   #error p {
     margin: 1rem 0; }
 
-.modular.header-image #body > .showcase {
-  margin-top: -9.5rem;
-  padding-top: 9rem; }
 .modular .showcase {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   background-color: #252d35;
   text-align: center;
-  color: #f2f2f2; }
+  color: #f2f2f2;
+  margin-top: -3rem; }
   .modular .showcase h1 {
     font-size: 3.5rem;
     margin-top: 0; }
@@ -735,12 +700,23 @@ ul.pagination {
 .callout {
   background: #f6f6f6;
   padding: 3rem 0.938rem; }
+  @media only all and (max-width: 59.938rem) {
+    .callout {
+      text-align: center; } }
   .callout .align-left {
     float: left;
     margin-right: 2rem; }
+    @media only all and (max-width: 59.938rem) {
+      .callout .align-left {
+        float: none;
+        margin-right: 0; } }
   .callout .align-right {
     float: right;
     margin-left: 2rem; }
+    @media only all and (max-width: 59.938rem) {
+      .callout .align-right {
+        float: none;
+        margin-left: 0; } }
   .callout img {
     border-radius: 3px; }
 

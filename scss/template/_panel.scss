@@ -64,12 +64,12 @@ $panel-text: #fff;
     @include transform(translate3d(0,0,0));
 }
 
-.container-push, .push-push {
+.container-push {
     @include transform(translate3d($sidebar-width,0,0));
 }
 
 /* Menu Transitions */
-.pushy, #container, .push{
+.pushy, #container {
     @include transition(transform .2s cubic-bezier(.16, .68, .43, .99));
     /* improves performance issues on mobile*/
     -webkit-perspective: 1000;
