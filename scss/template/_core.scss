@@ -41,6 +41,6 @@ b, strong {
 #body {
 	@extend .default-animation;
 	@extend .padding-horiz;
-	padding-top: 3rem;
+	padding-top: $padding-vert;
 	padding-bottom: $footer-height + $padding-vert;
 }

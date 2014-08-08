@@ -1,7 +1,7 @@
 // Modular Showcase styling
 .modular {
     .features {
-        padding: 3rem 0;
+        padding: $padding-vert 0;
         text-align: center;
         @include clearfix;
 

@@ -355,57 +355,6 @@ td {
   .button:active {
     background: #1e232a; }
 
-.bullets {
-  margin: 1.7rem 0;
-  margin-left: -0.85rem;
-  margin-right: -0.85rem;
-  overflow: auto; }
-
-.bullet {
-  float: left;
-  padding: 0 0.85rem; }
-
-.two-column-bullet {
-  width: 50%; }
-  @media only all and (max-width: 47.938rem) {
-    .two-column-bullet {
-      width: 100%; } }
-
-.three-column-bullet {
-  width: 33.33333%; }
-  @media only all and (max-width: 47.938rem) {
-    .three-column-bullet {
-      width: 100%; } }
-
-.four-column-bullet {
-  width: 25%; }
-  @media only all and (max-width: 47.938rem) {
-    .four-column-bullet {
-      width: 100%; } }
-
-.bullet-icon {
-  float: left;
-  background: #ed6f6d;
-  padding: 0.875rem;
-  width: 3.5rem;
-  height: 3.5rem;
-  border-radius: 50%;
-  color: white;
-  font-size: 1.75rem;
-  text-align: center; }
-
-.bullet-icon-1 {
-  background: #ed6f6d; }
-
-.bullet-icon-2 {
-  background: #ed6d96; }
-
-.bullet-icon-3 {
-  background: #6d80ed; }
-
-.bullet-content {
-  margin-left: 4.55rem; }
-
 #panel {
   color: white; }
   #panel .navigation {
