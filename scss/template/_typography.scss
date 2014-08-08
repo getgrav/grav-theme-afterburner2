@@ -1,0 +1,178 @@
+// Body Base
+body {
+	font-family: $font-family-default;
+	font-weight: 400;
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+	text-rendering: optimizeLegibility;
+	color: $emphasis-text;
+}
+
+h1 {
+	font-size: $h1-font-size;
+    @include breakpoint(mobile-only) {
+        font-size: 2.5rem;
+        line-height: 1.2;
+        margin-bottom: 2.5rem;
+    }
+}
+
+h2 {
+	@include breakpoint(tablet-range) {
+		font-size: $h2-font-size - .40;
+	}
+	@include breakpoint(mobile-only) {
+		font-size: $h2-font-size - .50;
+	}
+}
+
+h3 {
+	@include breakpoint(tablet-range) {
+		font-size: $h3-font-size - .40;
+	}
+	@include breakpoint(mobile-only) {
+		font-size: $h3-font-size - .50;
+	}
+}
+
+h4 {
+	font-size: $h4-font-size - .40;
+	border-bottom: 6px solid $header-border-color;
+	@include breakpoint(tablet-range) {
+		font-size: $h4-font-size - .40;
+	}
+	@include breakpoint(mobile-only) {
+		font-size: $h4-font-size - .50;
+	}
+}
+
+h1 {
+	text-align: center;
+}
+
+h1 + h2 {
+	margin: -2rem 0 2rem 0;
+	font-size: 1.8rem;
+	@include breakpoint(tablet-range) {
+		font-size: 1.6rem;
+	}
+	@include breakpoint(mobile-only) {
+		font-size: 1.5rem;
+	}
+	line-height: 1;
+	text-align: center;
+	font-family: $font-family-default;
+	font-weight: 300;
+}
+
+h2 + h3 {
+	margin: 1rem 0 2rem 0;
+	font-size: 1.5rem;
+	line-height: 1;
+	text-align: center;
+	font-family: $font-family-default;
+	font-weight: 300;
+}
+
+
+// Blockquote
+blockquote {
+	p {
+		font-size: 1.1rem;
+		color: #999;
+	}
+	cite {
+		display: block;
+		text-align: right;
+		color: #666;
+		font-size: 1.2rem;
+	}
+}
+
+// NOTES!!!!
+blockquote > blockquote > blockquote {
+
+	margin: 0;
+
+	p {
+
+		padding: 15px;
+		display: block;
+		font-size: 1rem;
+		margin-top: 0rem;
+		margin-bottom: 0rem;
+		border-radius: $border-radius;
+	}
+
+	> p {
+		// Yellow
+		margin-left: -40px;
+		background: #FCF8F2;
+		color: darken(#F0AD4E,15%);
+	}
+
+	> blockquote > p {
+		// Red
+		margin-left: -54px;
+		background: #FDF7F7;
+		color: darken(#D9534F,15%);
+	}
+
+	> blockquote > blockquote > p {
+		// Blue
+		margin-left: -68px;
+		background: #F4F8FA;
+		color: darken(#5BC0DE,15%);
+	}
+
+	> blockquote > blockquote > blockquote > p {
+		// Green
+		margin-left: -82px;
+		background: #F1F9F1;
+		color: darken(#5CB85C,15%);
+	}
+
+}
+
+// Inline and Code
+code,
+kbd,
+pre,
+samp {
+	font-family: $font-family-mono;
+}
+
+code {
+	background: $code-bg;
+	color: darken($code-text,10%);
+}
+
+pre {
+	padding: 2rem;
+	background: $pre-bg;
+	border: 1px solid $core-border-color;
+	border-radius: 3px;
+	code {
+		color: $pre-text;
+		background: inherit;
+	}
+}
+
+// Extras
+hr {
+	border-bottom: 4px solid $rule-color;
+}
+
+// Page Title
+.page-title {
+	margin-top: -25px;
+	padding: 25px;
+	float: left;
+	clear: both;
+	background: $core-accent;
+	color: $white;
+}
+

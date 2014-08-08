@@ -1,0 +1,5 @@
+.button {
+	@extend %button;
+	@extend .default-animation;
+	@include button-color($core-accent, $secondary-accent, $white);
+}
