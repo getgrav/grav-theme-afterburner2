@@ -630,12 +630,19 @@ ul.pagination {
           margin-top: 1rem;
           width: 100%; } }
     .modular .features.big i.fa {
-      font-size: 3rem;
-      float: left; }
+      font-size: 2.9rem;
+      float: left;
+      width: 75px;
+      line-height: 75px;
+      border-radius: 7px;
+      background: #00abef;
+      color: white; }
+    .modular .features.big i.fa-cubes {
+      padding-left: 4px; }
     .modular .features.big .feature-content {
       padding-right: 2rem; }
       .modular .features.big .feature-content.push {
-        margin-left: 5rem; }
+        margin-left: 5.5rem; }
       .modular .features.big .feature-content h4 {
         font-size: 1.3rem;
         text-align: left; }
