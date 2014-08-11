@@ -13,7 +13,9 @@
 	}
 
 	#logo {
-		background: url(../images/logo.png) 0 0 no-repeat;
+		background: $logo-image;
+		background-position: 0 0;
+		background-repeat: no-repeat;
 		display: block;
 		width: 255px;
 		height: 50px;
@@ -33,7 +35,7 @@
 		top: 14px;
 		left: 219px;
 		border-radius: 100%;
-		background: $core-accent;
+		background: $logo-accent;
 		@include breakpoint(desktop-range) {
 			width: 30px;
 			height: 30px;
@@ -90,14 +92,14 @@
 
 				&.active {
 					a {
-						background: #fff;
+						background: $navbar-bg-active;
 						color: $navbar-text;
 						font-weight: bold;
 					}
 				}
 				&:hover {
 					a {
-						background: #fff;
+						background: $navbar-bg-active;
 						color: $navbar-text;
 					}
 				}

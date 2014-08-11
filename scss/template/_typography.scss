@@ -94,7 +94,6 @@ blockquote {
 
 // NOTES!!!!
 blockquote > blockquote > blockquote {
-
 	margin: 0;
 
 	p {
@@ -164,7 +163,7 @@ pre {
 
 // Extras
 hr {
-	border-bottom: 4px solid $rule-color;
+	border-bottom: 4px solid $core-border-color;
 }
 
 // Page Title

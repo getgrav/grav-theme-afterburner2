@@ -15,8 +15,13 @@ $page-bg:						$white;
 $header-bg:						#252d35;
 $header-text: 					#f2f2f2;
 
+// Logo
+$logo-image:					url(../images/logo.png);
+$logo-accent:					$core-accent;
+
 // Nav
 $navbar-bg: 					#f3f3f3;
+$navbar-bg-active:				$white;
 $navbar-text: 					#333333;
 
 // Showcase
@@ -42,7 +47,6 @@ $footer-bg:						#313741;
 $footer-text:					#aaaaaa;
 
 // Borders
-$body-border:					darken($main-bg, 5%);
 $core-border-color:				$light-gray;
 $core-border-color-hover: 		darken($core-border-color, 10);
 $core-border-color-focus: 		$core-accent;
@@ -52,7 +56,6 @@ $core-box-shadow: 				inset 0 1px 3px hsla(0, 0%, 0%, 0.06);
 $core-box-shadow-focus: 		$core-box-shadow, 0 0 5px rgba(darken($core-border-color-focus, 5), 0.7);
 
 // Typography
-$rule-color: 					#F0F2F4;
 $code-text:						#c7254e;
 $code-bg:						#f9f2f4;
 $pre-text:						#237794;

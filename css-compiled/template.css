@@ -74,7 +74,9 @@ b, strong, label, th {
     position: relative;
     float: left; }
   #header #logo {
-    background: url(../images/logo.png) 0 0 no-repeat;
+    background: url(../images/logo.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
     display: block;
     width: 255px;
     height: 50px;
@@ -135,11 +137,11 @@ b, strong, label, th {
           border-right: 0;
           border-radius: 0 3px 3px 0; }
         #header #navbar ul li.active a {
-          background: #fff;
+          background: white;
           color: #333333;
           font-weight: bold; }
         #header #navbar ul li:hover a {
-          background: #fff;
+          background: white;
           color: #333333; }
       @media only all and (max-width: 59.938rem) {
         #header #navbar ul {
@@ -163,11 +165,11 @@ b, strong, label, th {
   left: 0;
   text-align: center; }
   #footer a:hover {
-    color: #fff; }
+    color: white; }
   #footer p {
     margin: 0; }
     #footer p .fa {
-      color: #fff; }
+      color: white; }
 
 body {
   font-family: "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
@@ -291,7 +293,7 @@ pre {
     background: inherit; }
 
 hr {
-  border-bottom: 4px solid #f0f2f4; }
+  border-bottom: 4px solid #e7e7e7; }
 
 .page-title {
   margin-top: -25px;
@@ -335,15 +337,15 @@ form input {
   font-weight: 400; }
 
 table {
-  border: 1px solid #f4f4f4; }
+  border: 1px solid #e7e7e7; }
 
 th {
-  background: white;
+  background: #f4f4f4;
   padding: 0.5rem; }
 
 td {
   padding: 0.5rem;
-  border: 1px solid #f4f4f4; }
+  border: #e7e7e7; }
 
 .button {
   background: #ed6f6d;
@@ -514,9 +516,6 @@ td {
 
 .syndicate a {
   margin-bottom: 1rem; }
-
-div#breadcrumbs {
-  padding-left: 0; }
 
 #sidebar {
   padding-left: 3rem; }

@@ -1,14 +1,14 @@
 table {
-	border: 1px solid lighten($core-border-color,5%);
+	border: 1px solid $core-border-color;
 }
 
 th {
 	@extend strong;
-	background: lighten($core-border-color,10%);
+	background: lighten($core-border-color,5%);
 	padding: 0.5rem;
 }
 
 td {
 	padding: 0.5rem;
-	border: 1px solid lighten($core-border-color,5%); 
+	border: $core-border-color; 
 }
