@@ -48,16 +48,21 @@
 				}
 			}
 		}
+	}
 
-		img {
-			display: block;
-			margin-top: 1rem;
-			border-radius: $border-radius;
-		}
+	img {
+		float: left;
+		margin-top: 0.5rem;
+		border-radius: $border-radius;
+		margin-right: 1.5rem;
+		margin-bottom: 1.5rem;
 	}
 
 	.list-blog-date {
 		display: inline-block;
+		@include breakpoint(mobile-only) {
+			display: block;
+		}
 	}
 }
 
@@ -67,6 +72,9 @@
 	font-size: $core-font-size - 0.1;
 	.tags {
 		float: right;
+		@include breakpoint(mobile-only) {
+			float: none;
+		}
 		a {
 			background: none !important;
 			padding: 0;
