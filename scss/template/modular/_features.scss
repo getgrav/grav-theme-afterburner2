@@ -69,15 +69,24 @@
             }
 
             i.fa {
-                font-size: 3rem;
+                font-size: 2.9rem;
                 float: left;
+                width: 75px;
+                line-height: 75px;
+                border-radius: $border-radius + 4;
+                background: $tertiary-accent;
+                color: $white;
+            }
+
+            i.fa-cubes {
+                padding-left: 4px;
             }
 
             .feature-content {
                 padding-right: 2rem;
 
                 &.push {
-                    margin-left: 5rem;
+                    margin-left: 5.5rem;
                 }
 
                 h4 {

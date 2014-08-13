@@ -29,7 +29,6 @@
 
 // List Blog Item
 .list-item {
-	border-bottom: 1px solid $border-color;
 	margin-bottom: $padding-vert;
 
 	&:last-child {
@@ -49,25 +48,33 @@
 				}
 			}
 		}
+	}
 
-		img {
-			display: block;
-			margin-top: 1rem;
-			border-radius: $border-radius;
-		}
+	img {
+		float: left;
+		margin-top: 0.5rem;
+		border-radius: $border-radius;
+		margin-right: 1.5rem;
+		margin-bottom: 1.5rem;
 	}
 
 	.list-blog-date {
 		display: inline-block;
+		@include breakpoint(mobile-only) {
+			display: block;
+		}
 	}
 }
 
 .list-blog-details {
-	background: $border-color;
+	background: lighten($core-border-color, 2%);
 	padding: 0.5rem 1rem;
 	font-size: $core-font-size - 0.1;
 	.tags {
 		float: right;
+		@include breakpoint(mobile-only) {
+			float: none;
+		}
 		a {
 			background: none !important;
 			padding: 0;
@@ -93,11 +100,11 @@
 		padding: 0.1rem 0.5rem;
 		margin-bottom: 0.2rem;
 		text-transform: uppercase;
-		background: $border-color;
+		background: lighten($core-border-color, 2%);
 		border-radius: $border-radius;
 		color: $core-text;
 		&:hover {
-			background: darken($border-color, 10%);
+			background: $core-border-color;
 			color: $emphasis-text;
 		}
 	}
@@ -108,7 +115,7 @@
 	padding: 0;
 	list-style: none;
 	li {
-		border-bottom: 1px solid $border-color;
+		border-bottom: 1px solid $core-border-color;
 		line-height: $core-font-size + 1rem;
 		&:last-child {
 			border-bottom: 0;
@@ -121,11 +128,6 @@
 	a {
 		margin-bottom: 1rem;
 	}
-}
-
-// Breadcrumbs
-div#breadcrumbs {
-	padding-left: 0;
 }
 
 // Sidebar

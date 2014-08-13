@@ -2,15 +2,14 @@
 
     <div class="list-blog-header">
         <h4><a href="{{ page.url }}">{{ page.title }}</a></h4>
-        {% if big_header %}
-            {{ page.assets.images|first.cropResize(900,600).html }}
-        {% else %}
-            {{ page.assets.images|first.cropZoom(900,300).html }}
-        {% endif %}
-        
     </div>
 
     <div class="list-blog-padding">
+     {% if big_header %}
+        {{ page.media.images|first.cropResize(900,600).html }}
+    {% else %}
+        {{ page.media.images|first.cropZoom(175,175).html }}
+    {% endif %}
     {% if truncate %}
         <p>{{ page.content|truncate(550) }}</p>
         <p><a href="{{ page.url }}" class="button primary">Read More +</a></p>

@@ -8,18 +8,17 @@
 	bottom: 0;
 	left: 0;
 	@extend .padding-horiz;
-	color: #999;
 	text-align: center;
 
 	a:hover {
-		color: #fff;
+		color: $text-highlight;
 	}
 
 	p {
 		@extend %vertical-align;
 		margin: 0;
 		.fa {
-			color: #fff;
+			color: $text-highlight;
 		}
 	}
 }
