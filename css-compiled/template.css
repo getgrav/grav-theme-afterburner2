@@ -52,11 +52,11 @@ b, strong, label, th {
 .padding-horiz, .fullwidth #header, .fullwidth #breadcrumbs, .fullwidth .blog-header, .fullwidth .blog-content-item, .fullwidth .blog-content-list, .fullwidth ul.pagination, .fullwidth #body > .modular-row, #body, #header, #footer {
   padding-left: 7rem;
   padding-right: 7rem; }
-  @media only all and (max-width: 59.938rem) {
+  @media only all and (max-width: 59.938em) {
     .padding-horiz, .fullwidth #header, .fullwidth #breadcrumbs, .fullwidth .blog-header, .fullwidth .blog-content-item, .fullwidth .blog-content-list, .fullwidth ul.pagination, .fullwidth #body > .modular-row, #body, #header, #footer {
       padding-left: 4rem;
       padding-right: 4rem; } }
-  @media only all and (max-width: 47.938rem) {
+  @media only all and (max-width: 47.938em) {
     .padding-horiz, .fullwidth #header, .fullwidth #breadcrumbs, .fullwidth .blog-header, .fullwidth .blog-content-item, .fullwidth .blog-content-list, .fullwidth ul.pagination, .fullwidth #body > .modular-row, #body, #header, #footer {
       padding-left: 1rem;
       padding-right: 1rem; } }
@@ -82,7 +82,7 @@ b, strong, label, th {
     height: 50px;
     z-index: 2;
     position: relative; }
-    @media only all and (min-width: 60rem) and (max-width: 74.938rem) {
+    @media only all and (min-width: 60em) and (max-width: 74.938em) {
       #header #logo {
         width: 220px;
         background-size: 220px; } }
@@ -95,7 +95,7 @@ b, strong, label, th {
     left: 219px;
     border-radius: 100%;
     background: #ed6f6d; }
-    @media only all and (min-width: 60rem) and (max-width: 74.938rem) {
+    @media only all and (min-width: 60em) and (max-width: 74.938em) {
       #header .logo-accent {
         width: 30px;
         height: 30px;
@@ -108,7 +108,7 @@ b, strong, label, th {
     float: right;
     border-radius: 3px;
     margin-top: 0.5rem; }
-    @media only all and (max-width: 59.938rem) {
+    @media only all and (max-width: 59.938em) {
       #header #navbar {
         background: none;
         float: none;
@@ -128,7 +128,7 @@ b, strong, label, th {
           line-height: 2.8rem;
           color: rgba(51, 51, 51, 0.8);
           border-right: 1px solid #dfdfdf; }
-          @media only all and (min-width: 60rem) and (max-width: 74.938rem) {
+          @media only all and (min-width: 60em) and (max-width: 74.938em) {
             #header #navbar ul li a {
               padding: 0 0.8rem; } }
         #header #navbar ul li:first-child a {
@@ -143,7 +143,7 @@ b, strong, label, th {
         #header #navbar ul li:hover a {
           background: white;
           color: #333333; }
-      @media only all and (max-width: 59.938rem) {
+      @media only all and (max-width: 59.938em) {
         #header #navbar ul {
           display: none; } }
     #header #navbar .panel-activation {
@@ -151,7 +151,7 @@ b, strong, label, th {
       font-size: 2rem;
       cursor: pointer;
       float: right; }
-      @media only all and (max-width: 59.938rem) {
+      @media only all and (max-width: 59.938em) {
         #header #navbar .panel-activation {
           display: inline-block; } }
 
@@ -182,33 +182,33 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 3.2rem; }
-  @media only all and (max-width: 47.938rem) {
+  @media only all and (max-width: 47.938em) {
     h1 {
       font-size: 2.5rem;
       line-height: 1.2;
       margin-bottom: 2.5rem; } }
 
-@media only all and (min-width: 48rem) and (max-width: 59.938rem) {
+@media only all and (min-width: 48em) and (max-width: 59.938em) {
   h2 {
     font-size: 2.1rem; } }
-@media only all and (max-width: 47.938rem) {
+@media only all and (max-width: 47.938em) {
   h2 {
     font-size: 2rem; } }
 
-@media only all and (min-width: 48rem) and (max-width: 59.938rem) {
+@media only all and (min-width: 48em) and (max-width: 59.938em) {
   h3 {
     font-size: 1.7rem; } }
-@media only all and (max-width: 47.938rem) {
+@media only all and (max-width: 47.938em) {
   h3 {
     font-size: 1.6rem; } }
 
 h4 {
   font-size: 1.35rem;
   border-bottom: 6px solid #e7e7e7; }
-  @media only all and (min-width: 48rem) and (max-width: 59.938rem) {
+  @media only all and (min-width: 48em) and (max-width: 59.938em) {
     h4 {
       font-size: 1.35rem; } }
-  @media only all and (max-width: 47.938rem) {
+  @media only all and (max-width: 47.938em) {
     h4 {
       font-size: 1.25rem; } }
 
@@ -222,10 +222,10 @@ h1 + h2 {
   text-align: center;
   font-family: "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
   font-weight: 300; }
-  @media only all and (min-width: 48rem) and (max-width: 59.938rem) {
+  @media only all and (min-width: 48em) and (max-width: 59.938em) {
     h1 + h2 {
       font-size: 1.6rem; } }
-  @media only all and (max-width: 47.938rem) {
+  @media only all and (max-width: 47.938em) {
     h1 + h2 {
       font-size: 1.5rem; } }
 
@@ -444,10 +444,10 @@ td {
   .blog-header h1 {
     font-size: 3.5rem;
     margin-top: 0; }
-    @media only all and (min-width: 48rem) and (max-width: 59.938rem) {
+    @media only all and (min-width: 48em) and (max-width: 59.938em) {
       .blog-header h1 {
         font-size: 3rem; } }
-    @media only all and (max-width: 47.938rem) {
+    @media only all and (max-width: 47.938em) {
       .blog-header h1 {
         font-size: 2.5rem;
         line-height: 1.2;
@@ -479,7 +479,7 @@ td {
     margin-bottom: 1.5rem; }
   .list-item .list-blog-date {
     display: inline-block; }
-    @media only all and (max-width: 47.938rem) {
+    @media only all and (max-width: 47.938em) {
       .list-item .list-blog-date {
         display: block; } }
 
@@ -489,7 +489,7 @@ td {
   font-size: 0.9rem; }
   .list-blog-details .tags {
     float: right; }
-    @media only all and (max-width: 47.938rem) {
+    @media only all and (max-width: 47.938em) {
       .list-blog-details .tags {
         float: none; } }
     .list-blog-details .tags a {
@@ -529,7 +529,7 @@ td {
 
 #sidebar {
   padding-left: 3rem; }
-  @media only all and (max-width: 47.938rem) {
+  @media only all and (max-width: 47.938em) {
     #sidebar {
       padding-left: 0; } }
   #sidebar .sidebar-content {
@@ -565,10 +565,10 @@ ul.pagination {
   .modular .showcase h1 {
     font-size: 3.5rem;
     margin-top: 0; }
-    @media only all and (min-width: 48rem) and (max-width: 59.938rem) {
+    @media only all and (min-width: 48em) and (max-width: 59.938em) {
       .modular .showcase h1 {
         font-size: 3rem; } }
-    @media only all and (max-width: 47.938rem) {
+    @media only all and (max-width: 47.938em) {
       .modular .showcase h1 {
         font-size: 2.5rem;
         line-height: 1.2;
@@ -600,7 +600,7 @@ ul.pagination {
   .modular .features p {
     margin: 1rem 0;
     font-size: 1.2rem; }
-    @media only all and (max-width: 47.938rem) {
+    @media only all and (max-width: 47.938em) {
       .modular .features p {
         font-size: 1rem; } }
   .modular .features .feature-items {
@@ -612,11 +612,11 @@ ul.pagination {
     vertical-align: top;
     margin-top: 2rem;
     margin-bottom: 1rem; }
-    @media only all and (min-width: 30.063rem) and (max-width: 47.938rem) {
+    @media only all and (min-width: 30.063em) and (max-width: 47.938em) {
       .modular .features .feature {
         margin-top: 1rem;
         width: 50%; } }
-    @media only all and (max-width: 30rem) {
+    @media only all and (max-width: 30em) {
       .modular .features .feature {
         margin-top: 1rem;
         width: 100%; } }
@@ -635,7 +635,7 @@ ul.pagination {
     text-align: center; }
     .modular .features.big .feature {
       width: 50%; }
-      @media only all and (max-width: 30rem) {
+      @media only all and (max-width: 30em) {
         .modular .features.big .feature {
           margin-top: 1rem;
           width: 100%; } }
@@ -663,20 +663,20 @@ ul.pagination {
 .callout {
   background: #f6f6f6;
   padding: 3rem 0.938rem; }
-  @media only all and (max-width: 59.938rem) {
+  @media only all and (max-width: 59.938em) {
     .callout {
       text-align: center; } }
   .callout .align-left {
     float: left;
     margin-right: 2rem; }
-    @media only all and (max-width: 59.938rem) {
+    @media only all and (max-width: 59.938em) {
       .callout .align-left {
         float: none;
         margin-right: 0; } }
   .callout .align-right {
     float: right;
     margin-left: 2rem; }
-    @media only all and (max-width: 59.938rem) {
+    @media only all and (max-width: 59.938em) {
       .callout .align-right {
         float: none;
         margin-left: 0; } }
