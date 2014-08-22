@@ -148,7 +148,7 @@ b, strong, label, th {
           display: none; } }
     #header #navbar .panel-activation {
       display: none;
-      font-size: 2rem;
+      font-size: 1.8rem;
       cursor: pointer;
       float: right; }
       @media only all and (max-width: 59.938em) {
