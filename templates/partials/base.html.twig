@@ -13,13 +13,14 @@
     {% if header.robots %}
         <meta name="robots" content="{{ header.robots }}" />
     {% endif %}
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="icon" type="image/png" href="{{ theme_url }}/images/favicon.png" />
 
     {% block stylesheets %}
         {% do assets.add('theme://css-compiled/nucleus.css',102) %}
         {% do assets.add('theme://css-compiled/template.css',101) %}
         {% do assets.add('theme://css/font-awesome.min.css',100) %}
+        {% do assets.add('theme://css/slidebars.min.css') %}
 
         {% if page.header.lightbox %}
             {% do assets.add('theme://css/featherlight.min.css') %}
@@ -37,7 +38,7 @@
     {% block javascripts %}
         {% do assets.add('theme://js/jquery-2.1.1.min.js',101) %}
         {% do assets.add('theme://js/modernizr.custom.71422.js',100) %}
-        {% do assets.add('theme://js/pushy.min.js') %}
+        {% do assets.add('theme://js/slidebars.min.js') %}
 
         {% if page.header.lightbox %}
             {% do assets.add('theme://js/featherlight.min.js') %}
@@ -50,13 +51,7 @@
 
 </head>
 <body id="top" class="{{ page.header.body_classes }}">
-    <nav class="pushy pushy-left">
-        <div id="panel">
-        {% include 'partials/navigation.html.twig' %}
-        </div>
-    </nav>
-    <div class="site-overlay"></div>
-    <div id="container">
+    <div id="sb-site">
         {% block header %}
         <header id="header">
                 <div class="logo-surround">
@@ -65,7 +60,7 @@
                 </div>
                 <div id="navbar">
                     {% include 'partials/navigation.html.twig' %}
-                    <span class="panel-activation menu-btn fa fa-bars"></span>
+                    <span class="panel-activation sb-toggle-left navbar-left menu-btn fa fa-bars"></span>
                 </div>
         </header>
         {% endblock %}
@@ -83,12 +78,25 @@
         </footer>
         {% endblock %}
     </div>
-    {% if page.header.lightbox %}
+    <div class="sb-slidebar sb-left sb-width-thin">
+        <div id="panel">
+        {% include 'partials/navigation.html.twig' %}
+        </div>
+    </div>
+    {% block bottom %}
     <script>
     $(function () {
+        $(document).ready(function() {
+          $.slidebars({
+            hideControlClasses: true,
+            scrollLock: true
+          });
+        });
+        {% if page.header.lightbox %}
         $('a[rel="lightbox"]').featherlight();
+        {% endif %}
     });
     </script>
-    {% endif %}
+    {% endblock %}
 </body>
 </html>
