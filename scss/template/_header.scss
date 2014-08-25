@@ -111,8 +111,10 @@
 		}
 
 		.panel-activation {
+
+            padding: 1rem;
 			display: none;
-			font-size: 2rem;
+			font-size: 1.8rem;
 			cursor: pointer;
 			float: right;
 			@include breakpoint(desktop-only) {
