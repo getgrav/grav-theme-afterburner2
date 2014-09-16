@@ -1,0 +1,8 @@
+name: Afterburner2
+version: 1.1.1
+author: Team Grav
+url: http://getgrav.org
+description: Afterburner2 is modern, responsive, and built for speed!
+
+form:
+  fields:
