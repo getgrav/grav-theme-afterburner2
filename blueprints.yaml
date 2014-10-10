@@ -12,4 +12,5 @@ bugs: https://github.com/getgrav/grav-theme-afterburner2/issues
 license: MIT
 
 form:
+  validation: strict
   fields:
