@@ -75,6 +75,16 @@
 					@include breakpoint(desktop-range) {
 						padding: 0 0.8rem;
 					}
+					&:after {
+						font-family: $icons;
+						content: "\f107";
+						float: right;
+						margin-left: 5px;
+					}
+					&:only-child:after {
+						content: '';
+						display: none;
+					}
 				}
 
 				&:first-child {
@@ -127,6 +137,15 @@
 						border: 0;
 						border-radius: 0;
 						color: $white;
+						&:after {
+							font-family: $icons;
+							content: "\f105";
+							float: right;
+						}
+						&:only-child:after {
+							content: '';
+							display: none;
+						}
 					}
 					&:first-child {
 						a {

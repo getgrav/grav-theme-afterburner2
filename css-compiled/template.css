@@ -134,6 +134,14 @@ b, strong, label, th {
           @media only all and (min-width: 60em) and (max-width: 74.938em) {
             #header #navbar ul li > a {
               padding: 0 0.8rem; } }
+          #header #navbar ul li > a:after {
+            font-family: "FontAwesome";
+            content: "\f107";
+            float: right;
+            margin-left: 5px; }
+          #header #navbar ul li > a:only-child:after {
+            content: '';
+            display: none; }
         #header #navbar ul li:first-child a {
           border-radius: 3px 0 0 3px; }
         #header #navbar ul li:last-child a {
@@ -167,6 +175,13 @@ b, strong, label, th {
             border: 0;
             border-radius: 0;
             color: #ffffff; }
+            #header #navbar ul ul li a:after {
+              font-family: "FontAwesome";
+              content: "\f105";
+              float: right; }
+            #header #navbar ul ul li a:only-child:after {
+              content: '';
+              display: none; }
           #header #navbar ul ul li:first-child a {
             border-radius: 3px 3px 0 0; }
           #header #navbar ul ul li:last-child a {
