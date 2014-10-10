@@ -5,7 +5,7 @@
 	padding-top: 0.5rem;
 	padding-bottom: 1rem;
 	background-color: $header-bg;
-	overflow: hidden;
+	@include clearfix;
 
 	.logo-surround {
 		position: relative;
@@ -66,7 +66,7 @@
 				float: left;
 				position: relative;
 
-				a {
+				> a {
 					display: inline-block;
 					padding: 0 1.2rem;
 					line-height: 2.8rem;
@@ -91,16 +91,19 @@
 				}
 
 				&.active {
-					a {
+					> a {
 						background: $navbar-bg-active;
 						color: $navbar-text;
 						font-weight: bold;
 					}
 				}
 				&:hover {
-					a {
+					> a {
 						background: $navbar-bg-active;
 						color: $navbar-text;
+					}
+					> ul {
+						display: list-item;
 					}
 				}
 
@@ -108,10 +111,53 @@
 			@include breakpoint(desktop-only) {
 				display: none;
 			}
+			ul {
+				display: none;
+				position: absolute;
+				top: 100%;
+				background: $core-accent;
+				border-radius: $border-radius;
+				text-transform: none;
+				font-size: $core-font-size - 0.2rem;
+				li {
+					float: none;
+					position: relative;
+					a {
+						width: $dropdown-width;
+						border: 0;
+						border-radius: 0;
+						color: $white;
+					}
+					&:first-child {
+						a {
+							border-radius: $border-radius $border-radius 0 0;
+						}
+					}
+					&:last-child {
+						a {
+							border-radius: 0 0 $border-radius $border-radius;
+						}
+					}
+					&.active {
+						> a {
+							background: lighten($core-accent, 10%);
+							font-weight: normal;
+						}
+					}
+					&:hover {
+						> a {
+							background: lighten($core-accent, 10%);
+						}
+					}
+				}
+				ul {
+					left: 100%;
+					top: 0;
+				}
+			}
 		}
 
 		.panel-activation {
-
             padding: 1rem;
 			display: none;
 			font-size: 1.8rem;
