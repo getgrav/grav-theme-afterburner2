@@ -1,8 +1,16 @@
 name: Afterburner2
-version: 1.1.1
-author: Team Grav
-url: http://getgrav.org
-description: Afterburner2 is modern, responsive, and built for speed!
+version: 1.1.2
+description: "Afterburner2 is modern, responsive, and **built for speed**!"
+icon: paper-plane
+author:
+  name: Team Grav
+  email: devs@getgrav.org
+  url: http://getgrav.org
+homepage: https://github.com/getgrav/grav-theme-afterburner2
+keywords: afterburner, theme, modern, fast, responsive
+bugs: https://github.com/getgrav/grav-theme-afterburner2/issues
+license: MIT
 
 form:
+  validation: strict
   fields:

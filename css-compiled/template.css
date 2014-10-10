@@ -19,7 +19,7 @@ html, body {
   height: 100%; }
 
 body {
-  background: white;
+  background: #ffffff;
   color: #777777;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -68,8 +68,11 @@ b, strong, label, th {
 #header {
   padding-top: 0.5rem;
   padding-bottom: 1rem;
-  background-color: #252d35;
-  overflow: hidden; }
+  background-color: #252d35; }
+  #header:after {
+    content: "";
+    display: table;
+    clear: both; }
   #header .logo-surround {
     position: relative;
     float: left; }
@@ -122,30 +125,75 @@ b, strong, label, th {
       #header #navbar ul li {
         float: left;
         position: relative; }
-        #header #navbar ul li a {
+        #header #navbar ul li > a {
           display: inline-block;
           padding: 0 1.2rem;
           line-height: 2.8rem;
           color: rgba(51, 51, 51, 0.8);
           border-right: 1px solid #dfdfdf; }
           @media only all and (min-width: 60em) and (max-width: 74.938em) {
-            #header #navbar ul li a {
+            #header #navbar ul li > a {
               padding: 0 0.8rem; } }
+          #header #navbar ul li > a:after {
+            font-family: "FontAwesome";
+            content: "\f107";
+            float: right;
+            margin-left: 5px; }
+          #header #navbar ul li > a:only-child:after {
+            content: '';
+            display: none; }
         #header #navbar ul li:first-child a {
           border-radius: 3px 0 0 3px; }
         #header #navbar ul li:last-child a {
           border-right: 0;
           border-radius: 0 3px 3px 0; }
-        #header #navbar ul li.active a {
-          background: white;
+        #header #navbar ul li.active > a {
+          background: #ffffff;
           color: #333333;
           font-weight: bold; }
-        #header #navbar ul li:hover a {
-          background: white;
+        #header #navbar ul li:hover > a {
+          background: #ffffff;
           color: #333333; }
+        #header #navbar ul li:hover > ul {
+          display: list-item; }
       @media only all and (max-width: 59.938em) {
         #header #navbar ul {
           display: none; } }
+      #header #navbar ul ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        background: #ed6f6d;
+        border-radius: 3px;
+        text-transform: none;
+        font-size: 0.8rem; }
+        #header #navbar ul ul li {
+          float: none;
+          position: relative; }
+          #header #navbar ul ul li a {
+            width: 160px;
+            border: 0;
+            border-radius: 0;
+            color: #ffffff; }
+            #header #navbar ul ul li a:after {
+              font-family: "FontAwesome";
+              content: "\f105";
+              float: right; }
+            #header #navbar ul ul li a:only-child:after {
+              content: '';
+              display: none; }
+          #header #navbar ul ul li:first-child a {
+            border-radius: 3px 3px 0 0; }
+          #header #navbar ul ul li:last-child a {
+            border-radius: 0 0 3px 3px; }
+          #header #navbar ul ul li.active > a {
+            background: #f39c9a;
+            font-weight: normal; }
+          #header #navbar ul ul li:hover > a {
+            background: #f39c9a; }
+        #header #navbar ul ul ul {
+          left: 100%;
+          top: 0; }
     #header #navbar .panel-activation {
       padding: 1rem;
       display: none;
@@ -166,11 +214,11 @@ b, strong, label, th {
   left: 0;
   text-align: center; }
   #footer a:hover {
-    color: white; }
+    color: #ffffff; }
   #footer p {
     margin: 0; }
     #footer p .fa {
-      color: white; }
+      color: #ffffff; }
 
 body {
   font-family: "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
@@ -302,7 +350,7 @@ hr {
   float: left;
   clear: both;
   background: #ed6f6d;
-  color: white; }
+  color: #ffffff; }
 
 body #breadcrumbs {
   padding-left: 0; }
@@ -352,10 +400,10 @@ td {
 
 .button {
   background: #ed6f6d;
-  color: white; }
+  color: #ffffff; }
   .button:hover {
     background: #495565;
-    color: white; }
+    color: #ffffff; }
   .button:active {
     background: #1e232a; }
 
@@ -364,29 +412,42 @@ td {
 
 #panel {
   padding-top: 1rem;
-  color: white; }
+  color: #ffffff; }
   #panel .navigation {
     list-style: none;
     padding: 0; }
     #panel .navigation li {
       border-bottom: 1px solid #525f71; }
-      #panel .navigation li a {
-        color: white;
+      #panel .navigation li > a {
+        color: #ffffff;
         display: block;
         padding: 0.5rem 1rem;
         font-weight: 600; }
-        #panel .navigation li a:hover {
+        #panel .navigation li > a:hover {
           color: white;
           background-color: #3e4956; }
-        #panel .navigation li a:last-child {
+        #panel .navigation li > a:last-child {
           border-bottom: 0; }
-      #panel .navigation li.active a {
+      #panel .navigation li.active > a {
         background: #ed6f6d;
-        color: white; }
-        #panel .navigation li.active a:hover {
-          color: white; }
+        color: #ffffff; }
+        #panel .navigation li.active > a:hover {
+          color: #ffffff; }
       #panel .navigation li:first-child {
         border-top: 1px solid #525f71; }
+      #panel .navigation li ul {
+        list-style: none;
+        padding: 0; }
+        #panel .navigation li ul li {
+          border: 0 !important; }
+          #panel .navigation li ul li a {
+            color: #e6e6e6;
+            padding: 0.5rem 1rem 0.5rem 2rem;
+            font-size: 0.9rem; }
+          #panel .navigation li ul li li a {
+            padding-left: 3rem; }
+            #panel .navigation li ul li li a li a {
+              padding-left: 4rem; }
 
 .blog-header {
   padding-top: 2rem;
@@ -601,8 +662,8 @@ ul.pagination {
       width: 75px;
       line-height: 75px;
       border-radius: 7px;
-      background: #00abef;
-      color: white; }
+      background: #00ABEF;
+      color: #ffffff; }
     .modular .features.big i.fa-cubes {
       padding-left: 4px; }
     .modular .features.big .feature-content {
