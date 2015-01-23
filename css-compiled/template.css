@@ -9,11 +9,12 @@
 
 .button {
   display: inline-block;
-  padding: 5px 15px;
+  padding: 9px 20px;
   font-size: 0.8rem;
   font-weight: bold;
   border-radius: 3px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  line-height: 100%; }
 
 html, body {
   height: 100%; }
@@ -352,6 +353,16 @@ hr {
   background: #ed6f6d;
   color: #ffffff; }
 
+.label {
+  background: #ed6f6d;
+  color: #ffffff;
+  font-size: 90%;
+  border-radius: 3px;
+  display: inline-block;
+  line-height: 100%;
+  padding: 2px 4px;
+  vertical-align: middle; }
+
 body #breadcrumbs {
   padding-left: 0; }
   body #breadcrumbs a {
@@ -562,8 +573,10 @@ td {
       margin-top: 1rem; }
 
 ul.pagination {
-  margin: 0 0 3rem;
-  text-align: left; }
+  margin: 0 auto 3rem; }
+
+.prev-next {
+  text-align: center; }
 
 #error {
   text-align: center;

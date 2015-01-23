@@ -163,6 +163,10 @@
 
 // Pagination
 ul.pagination {
-	margin: 0 0 $padding-vert;
-	text-align: left;
+	margin: 0 auto $padding-vert;
+}
+
+// Prev / Next Buttons
+.prev-next {
+    text-align: center;
 }
