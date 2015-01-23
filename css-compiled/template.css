@@ -529,14 +529,22 @@ td {
     background: #e7e7e7;
     color: #444444; }
 
-.archives {
+.archives, .related-pages {
   padding: 0;
   list-style: none; }
-  .archives li {
+  .archives li, .related-pages li {
     border-bottom: 1px solid #e7e7e7;
     line-height: 2rem; }
-    .archives li:last-child {
+    .archives li:last-child, .related-pages li:last-child {
       border-bottom: 0; }
+
+.related-pages li a {
+  display: block; }
+.related-pages .score {
+  display: block;
+  float: right;
+  color: #999;
+  font-size: 85%; }
 
 .syndicate a {
   margin-bottom: 1rem; }

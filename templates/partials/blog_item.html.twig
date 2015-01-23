@@ -1,7 +1,17 @@
 <div class="list-item">
 
+    
     <div class="list-blog-header">
-        <h4><a href="{{ page.url }}">{{ page.title }}</a></h4>
+        {% if page.header.link %}
+            <h4>
+                {% if page.header.continue_link is not sameas(false) %}
+                <a href="{{ page.url }}"><i class="fa fa-angle-double-right"></i></a>
+                {% endif %}
+                <a href="{{ page.header.link }}">{{ page.title }}</a>
+            </h4>
+        {% else %}
+            <h4><a href="{{ page.url }}">{{ page.title }}</a></h4>
+        {% endif %}
     </div>
 
     <div class="list-blog-padding">

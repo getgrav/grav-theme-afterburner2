@@ -27,9 +27,8 @@
             {% do assets.add('theme://css/pure-0.5.0/grids-min.css',99) %}
             {% do assets.add('theme://js/html5shiv-printshiv.min.js',99) %}
         {% endif %}
-
-        {{ assets.css() }}
     {% endblock %}
+    {{ assets.css() }}
 
     {% block javascripts %}
         {% do assets.add('theme://js/jquery-2.1.1.min.js',101) %}
@@ -39,23 +38,24 @@
         {% if page.header.lightbox %}
             {% do assets.add('theme://js/featherlight.min.js') %}
         {% endif %}
-
-        {{ assets.js() }}
     {% endblock %}
+    {{ assets.js() }}
 
 {% endblock head%}
-
 </head>
 <body id="top" class="{{ page.header.body_classes }}">
     <div id="sb-site">
         {% block header %}
         <header id="header">
                 <div class="logo-surround">
-                    <a href="{{ base_url_absolute}}" id="logo"></a>
+                    <a href="{{ base_url == '' ? '/' : base_url }}" id="logo"></a>
                     <span class="logo-accent"></span>
                 </div>
                 <div id="navbar">
+                    {% block header_extra %}{% endblock %}
+                    {% block header_navigation %}
                     {% include 'partials/navigation.html.twig' %}
+                    {% endblock %}
                     <span class="panel-activation sb-toggle-left navbar-left menu-btn fa fa-bars"></span>
                 </div>
         </header>
