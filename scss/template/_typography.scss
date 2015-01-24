@@ -176,3 +176,15 @@ hr {
 	color: $white;
 }
 
+// Labels
+.label {
+    background: $core-accent;
+    color: $white;
+    font-size: 90%;
+    border-radius: 3px;
+    display: inline-block;
+    line-height: 100%;
+    padding: 2px 4px;
+    vertical-align: middle;
+}
+
