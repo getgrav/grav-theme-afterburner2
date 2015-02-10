@@ -1,3 +1,11 @@
+# v1.3.1
+## 02/10/2015
+
+1. [](#improved)
+    * Added demo link to blueprint
+1. [](#improved)
+    * Fix for table layout   
+
 # v1.3.0
 ## 01/23/2015
 
