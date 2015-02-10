@@ -1,5 +1,5 @@
 name: Afterburner2
-version: 1.3.0
+version: 1.3.1
 description: "Afterburner2 is modern, responsive, and **built for speed**!"
 icon: paper-plane
 author:
@@ -7,6 +7,7 @@ author:
   email: devs@getgrav.org
   url: http://getgrav.org
 homepage: https://github.com/getgrav/grav-theme-afterburner2
+demo: http://demo.getgrav.org/afterburner2-skeleton/
 keywords: afterburner, theme, modern, fast, responsive
 bugs: https://github.com/getgrav/grav-theme-afterburner2/issues
 license: MIT
