@@ -1,3 +1,9 @@
+# v1.3.3
+## 03/01/2015
+
+1. [](#improved)
+    * Switched to Grav's built-in `jQuery` assets
+
 # v1.3.2
 ## 02/19/2015
 
