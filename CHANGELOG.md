@@ -1,3 +1,9 @@
+# v1.3.4
+## 03/24/2015
+
+1. [](#bugfix)
+    * Load pure grids at all times for better non-flexbox support
+
 # v1.3.3
 ## 03/01/2015
 
