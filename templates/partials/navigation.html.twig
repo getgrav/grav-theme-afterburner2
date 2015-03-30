@@ -13,7 +13,7 @@
 {% endmacro %}
 
 <ul class="navigation">
-    {% if config.themes.afterburner2.dropdown.enabled %}
+    {% if theme_config.dropdown.enabled %}
         {{ _self.loop(pages) }}
     {% else %}
         {% for page in pages.children.visible %}
