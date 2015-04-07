@@ -1,3 +1,9 @@
+# v1.3.6
+## 04/07/2015
+
+1. [](#improved)
+    * Genericized theme_config variable for better inheritance
+
 # v1.3.5
 ## 03/24/2015
 
