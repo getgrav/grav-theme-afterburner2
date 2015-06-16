@@ -1,3 +1,9 @@
+# v1.3.8
+## 06/16/2015
+
+1. [](#bugfix)
+    * Handle page summary properly
+
 # v1.3.7
 ## 04/13/2015
 
