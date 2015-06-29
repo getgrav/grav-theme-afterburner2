@@ -23,7 +23,11 @@
         <p>{{ page.summary }}</p>
         <p><a href="{{ page.url }}" class="button primary">Read More +</a></p>
     {% elseif truncate %}
-        <p>{{ page.content|truncate(550) }}</p>
+        {% if page.summary != page.content %}
+            <p>{{ page.content|truncate(550) }}</p>
+        {% else %}
+            <p>{{ page.content }}</p>
+        {% endif %}
         <p><a href="{{ page.url }}" class="button primary">Read More +</a></p>
     {% else %}
         <p>{{ page.content }}</p>
@@ -38,7 +42,7 @@
         <span class="tags">
             Tags:
             {% for tag in page.taxonomy.tag %}
-            <a href="{{ base_url }}/tag:{{ tag }}">{{ tag }}</a>
+            <a href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
             {% endfor %}
         </span>
         {% endif %}
