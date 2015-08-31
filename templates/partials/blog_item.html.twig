@@ -1,7 +1,15 @@
 <div class="list-item">
 
+    {% set header_image = page.header.header_image|defined(true) %}
+    {% set header_image_width  = page.header.header_image_width|defined(900) %}
+    {% set header_image_height = page.header.header_image_height|defined(300) %}
+    {% set header_image_file = page.header.header_image_file %}
 
     <div class="list-blog-header">
+        <span class="list-blog-date">
+            <span>{{ page.date|date("d") }}</span>
+            <em>{{ page.date|date("M") }}</em>
+        </span>
         {% if page.header.link %}
             <h4>
                 {% if page.header.continue_link is not sameas(false) %}
@@ -12,7 +20,26 @@
         {% else %}
             <h4><a href="{{ page.url }}">{{ page.title }}</a></h4>
         {% endif %}
+
+        {% if page.taxonomy.tag %}
+        <span class="tags">
+            {% for tag in page.taxonomy.tag %}
+            <a href="{{ blog.url }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
+            {% endfor %}
+        </span>
+        {% endif %}
+        {% if header_image %}
+            {% if header_image_file %}
+                {% set header_image_media = page.media.images[header_image_file] %}
+            {% else %}
+                {% set header_image_media = page.media.images|first %}
+            {% endif %}
+            {{ header_image_media.cropZoom(header_image_width, header_image_height).html }}
+        {% endif %}
+
     </div>
+
+    <div class="list-blog-padding">
 
     {% if page.header.continue_link is sameas(false) %}
         <p>{{ page.content }}</p>
@@ -21,32 +48,18 @@
         {% endif %}
     {% elseif truncate and page.summary != page.content %}
         <p>{{ page.summary }}</p>
-        <p><a href="{{ page.url }}" class="button primary">Read More +</a></p>
+        <p><a href="{{ page.url }}">Continue Reading...</a></p>
     {% elseif truncate %}
         {% if page.summary != page.content %}
             <p>{{ page.content|truncate(550) }}</p>
         {% else %}
             <p>{{ page.content }}</p>
         {% endif %}
-        <p><a href="{{ page.url }}" class="button primary">Read More +</a></p>
+        <p><a href="{{ page.url }}">Continue Reading...</a></p>
     {% else %}
         <p>{{ page.content }}</p>
         {% set show_prev_next = true %}
     {% endif %}
-
-    <div class="list-blog-details">
-        <span class="list-blog-date">
-            Posted on {{ page.date|date("M") }} {{ page.date|date("d") }}, {{ page.date|date("Y") }}
-        </span>
-        {% if page.taxonomy.tag %}
-        <span class="tags">
-            Tags:
-            {% for tag in page.taxonomy.tag %}
-            <a href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
-            {% endfor %}
-        </span>
-        {% endif %}
-    </div>
 
     {% if show_prev_next %}
 
@@ -60,4 +73,6 @@
             {% endif %}
         </p>
     {% endif %}
+
+    </div>
 </div>
