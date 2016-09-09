@@ -1,3 +1,9 @@
+# v1.7.0
+## 09/09/2016
+
+1. [](#bugfix)
+    * Drop unneeded form twig overrides
+
 # v1.6.0
 ## 07/14/2016
 
@@ -6,7 +12,7 @@
     * Add logic to include site.menu items in modular pages too
 1. [](#bugfix)
     * Fix setting the page language in the html tag
-    
+
 # v1.5.1
 ## 09/16/2015
 
