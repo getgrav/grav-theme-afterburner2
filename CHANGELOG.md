@@ -1,3 +1,9 @@
+# v1.7.1
+## 02/26/2017
+
+1. [](#bugfix)
+    * Allow to add a `external` class to site.yaml links to work on modular pages [antimatter#95](https://github.com/getgrav/grav-theme-antimatter/pull/95)
+
 # v1.7.0
 ## 09/09/2016
 
