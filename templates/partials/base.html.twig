@@ -29,7 +29,6 @@
             {% do assets.add('theme://js/html5shiv-printshiv.min.js',99) %}
         {% endif %}
     {% endblock %}
-    {{ assets.css() }}
 
     {% block javascripts %}
         {% do assets.add('jquery',101) %}
@@ -40,8 +39,11 @@
             {% do assets.add('theme://js/featherlight.min.js') %}
         {% endif %}
     {% endblock %}
-    {{ assets.js() }}
 
+    {% block assets deferred %}
+    {{ assets.css()|raw }}
+    {{ assets.js()|raw }}
+    {% endblock %}
 {% endblock head%}
 </head>
 <body id="top" class="{{ page.header.body_classes }}">
@@ -96,6 +98,7 @@
         {% endif %}
     });
     </script>
+    {{ assets.js('bottom') }} 
     {% endblock %}
 </body>
 </html>
