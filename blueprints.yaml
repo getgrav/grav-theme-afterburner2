@@ -1,5 +1,7 @@
 name: Afterburner2
-version: 1.8.0
+slug: afterburner2
+type: theme
+version: 1.8.1
 description: "Afterburner2 is modern, responsive, and **built for speed**!"
 icon: paper-plane
 author:

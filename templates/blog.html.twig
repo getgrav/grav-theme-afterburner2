@@ -14,7 +14,7 @@
 
 	{% block content %}
 		<div class="blog-header">
-			{{ page.content }}
+			{{ page.content|raw }}
 		</div>
 
 		{% if config.plugins.breadcrumbs.enabled %}

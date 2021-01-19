@@ -1,5 +1,5 @@
 <div class="showcase">
-    {{ content }}
+    {{ content|raw }}
 
     {% for button in page.header.buttons %}
         <a class="button{% if button.primary %} primary{% endif %}" href="{{ base_url_relative }}{{ button.url }}">{{ button.text }}</a>
